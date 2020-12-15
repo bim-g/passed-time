@@ -1,4 +1,4 @@
-module.export = function(oldTime,config) {
+module.exports = function(oldTime,config) {
     // get remaining time after substaction.
     let diffTime = new Date(new Date().getTime() - new Date(oldTime).getTime());
     // 
@@ -18,7 +18,7 @@ module.export = function(oldTime,config) {
     let hours = parseInt(r_days / (60 * 60 * 1000))<10?"0"+parseInt(r_days / (60 * 60 * 1000)):parseInt(r_days / (60 * 60 * 1000));
     let minutes = parseInt(r_hours  / (60 * 1000))<10?"0"+parseInt(r_hours  / (60 * 1000)):parseInt(r_hours  / (60 * 1000));
     let secondes = parseInt(r_minute / 1000) < 10 ?"0"+parseInt(r_minute / 1000):parseInt(r_minute / 1000);
-    let timePost = "Il y a ";
+    let timePost = "";
     // check congiguration
     let detail=false;
     if(config && config.detail!=undefined){
@@ -45,9 +45,3 @@ module.export = function(oldTime,config) {
    
     return timePost;
 }
-
-let mytime="2020-12-15 21:40:10";
-let rtime = getRemainTime(mytime, {
-    detail: true
-});
-console.log(rtime);

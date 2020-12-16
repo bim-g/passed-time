@@ -1,6 +1,6 @@
 {
   "name": "remain-time",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "get how much time has passed before reached this momentcls",
   "main": "index.js",
   "scripts": {

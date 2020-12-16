@@ -1,7 +1,7 @@
 {
   "name": "remain-time",
   "version": "1.0.0",
-  "description": "'get how much time passed before reahed this moment'",
+  "description": "get how much time has passed before reached this momentcls",
   "main": "index.js",
   "scripts": {
     "start":"node index.js",

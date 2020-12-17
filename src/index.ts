@@ -1,3 +1,1 @@
-import  TimePassed from './TimePassed';
-
-export default TimePassed;
+export  {TimePassed} from './TimePassed';

@@ -1,4 +1,4 @@
-export default class TimePassed{
+export class TimePassed{
     private _date:string;
     // 
     constructor(myDate:any){

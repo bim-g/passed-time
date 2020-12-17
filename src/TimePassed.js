@@ -103,4 +103,4 @@ var TimePassed = /** @class */ (function () {
     };
     return TimePassed;
 }());
-exports["default"] = TimePassed;
+exports.TimePassed = TimePassed;

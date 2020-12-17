@@ -1,6 +1,6 @@
 {
   "name": "passed-time",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "get how much time has passed before reached this momentcls",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",

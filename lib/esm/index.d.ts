@@ -1,2 +1,1 @@
-import { TimePassed } from './TimePassed';
-export { TimePassed };
+export { TimePassed } from './TimePassed';

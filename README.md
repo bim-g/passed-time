@@ -34,20 +34,50 @@ include the module and form there you can pas the date as parametter, as show in
 * getTimePassed
 this method allow to get how much time passed until nom.
 ```javascript
-    const {PassedTime} = require("passed-time");
-    // import {PassedTime} from "passed-time"; 
+    const {TimePassed} = require("passed-time");
+    // import {TimePassed} from "passed-time"; 
     let date="2020-12-15 21:40:10";
-    const pt= new passedTime(date)
+    const pt= new TimePassed(date)
     console.log(pt.getTimePassed());
     // 1h
 ```
 * in case you would like to get more detail
 you can diffine the configuration detail to true
 ```javascript
-    const {PassedTime} = require("passed-time");
+    const {TimePassed} = require("passed-time");
     // import {PassedTime} from "passed-time"; 
     let date="2020-12-15 21:40:10";
-    const pt= new passedTime(date)
+    const pt= new TimePassed(date)
     console.log(pt.getTimePassed({detail:true}));
     // 1h23m01s
+```
+you can display allow available module as shown on the exemple bellow
+```javascript
+    const {  TimePassed } = require('passed-time');
+
+    let dat="2020-12-16 23:32";
+
+    let past = new TimePassed(dat);
+
+    let config={
+        detail:true
+    };
+
+    let time = {
+        a:past.getTimePassed(config),
+        b:past.getDayOfMonth(),
+        c:past.getLastWeek(),
+        d:past.getThisWeek(),
+        d:past.getTriSemester(),
+    };
+    console.log(time);
+```
+checkout ou the response will looks like
+```shell
+    {
+        a: 'yesterday at 23h',
+        b: 30,
+        c: { from: 2020-12-06T21:32:00.000Z, to: 2020-12-12T21:32:00.000Z },
+        d: { from: 2020-12-16T21:32:00.000Z, to: 2020-09-16T21:32:00.000Z }
+    }
 ```

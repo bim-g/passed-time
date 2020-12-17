@@ -1,2 +1,2 @@
-import { TimePassed } from './TimePassed';
-export { TimePassed };
+import TimePassed from './TimePassed';
+export default TimePassed;

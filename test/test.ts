@@ -1,4 +1,4 @@
-import {TimePassed} from '../src/index';
+import TimePassed from '../src/index';
 
 let date="2020-12-17 10:23";
 

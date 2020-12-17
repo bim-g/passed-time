@@ -13,6 +13,14 @@
     "time",
     "remaining"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bim-g/passed-time.git"
+  },
   "author": "Boss Ibrahim Mussa",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bim-g/passed-time/issues"
+  },
+  "homepage": "https://github.com/bim-g/passed-time#readme"
 }

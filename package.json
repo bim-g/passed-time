@@ -1,17 +1,23 @@
 {
-  "name": "remain-time",
-  "version": "1.0.0",
-  "description": "'get how much time passed before reahed this moment'",
-  "main": "index.js",
+  "name": "passed-time",
+  "version": "0.0.2",
+  "description": "get how much time has passed before reached this momentcls",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
-    "start":"node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "test": "tsc ./test/test.ts && node ./test/test.js",
+    "prepublish": "npm run tsc"
   },
   "keywords": [
-    "remain-time",
+    "time-passed",
     "moment",
     "time",
-    "remaining"
+    "passed-time",
+    "passed"
   ],
   "author": "Boss Ibrahim Mussa",
   "license": "MIT"

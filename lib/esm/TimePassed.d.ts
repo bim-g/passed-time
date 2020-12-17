@@ -15,4 +15,5 @@ export declare class TimePassed {
         from: Date;
         to: Date;
     };
+    private hundleError;
 }

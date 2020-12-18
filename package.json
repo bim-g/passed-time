@@ -28,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/bim-g/passed-time/issues"
   },
-  "homepage": "https://github.com/bim-g/passed-time#readme"
+  "homepage": "https://github.com/bim-g/passed-time#readme",
+  "dependencies": {
+    "date-format": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14"
+  }
 }

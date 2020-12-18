@@ -15,12 +15,10 @@ The idea is to allow with a simple module be able to get the interval of time th
     apart from those module, other expected are not avaible.
 
 # Installation
-install the module, open your terminal and tape this command
 
 ```shell
     npm install time-passed
 ```
-installation success, you can `require` the module or `import` depend on the `js` version you are using.
 # Integration
 The module is very easy to use.
 - step one : Date Format
@@ -34,50 +32,69 @@ include the module and form there you can pas the date as parametter, as show in
 * getTimePassed
 this method allow to get how much time passed until nom.
 ```javascript
-    const {TimePassed} = require("passed-time");
-    // import {TimePassed} from "passed-time"; 
-    let date="2020-12-15 21:40:10";
-    const pt= new TimePassed(date)
-    console.log(pt.getTimePassed());
-    // 1h
+    const {PassedTime} = require("passed-time");
+    let date="2020-12-17 10:23";
+    const pt= new PassedTime(date)
+    console.log(pt.getTimePassed());    
+```
+this out put look like, it will be defferent according the time you will test
+```shell
+    1d
 ```
 * in case you would like to get more detail
 you can diffine the configuration detail to true
 ```javascript
-    const {TimePassed} = require("passed-time");
+    const {PassedTime} = require("passed-time");
     // import {PassedTime} from "passed-time"; 
-    let date="2020-12-15 21:40:10";
-    const pt= new TimePassed(date)
+    let date="2020-12-17 10:23";
+    const pt= new PassedTime(date)
     console.log(pt.getTimePassed({detail:true}));
-    // 1h23m01s
+```
+```shell
+    1d 7h 34m 50s
 ```
 you can display allow available module as shown on the exemple bellow
 ```javascript
-    const {  TimePassed } = require('passed-time');
+    const {  PassedTime } = require('passed-time');
 
-    let dat="2020-12-16 23:32";
+    let dat="2020-12-17 10:23";
 
-    let past = new TimePassed(dat);
+    let past = new PassedTime(dat);
 
     let config={
         detail:true
     };
 
     let time = {
-        a:past.getTimePassed(config),
-        b:past.getDayOfMonth(),
-        c:past.getLastWeek(),
-        d:past.getThisWeek(),
-        d:past.getTriSemester(),
+        timeLeft:past.getTimePassed(config),
+        daysOfMonth:tp.getDayOfMonth(),
+        thisWeekPeriod:tp.getThisWeek(),
+        lastWeekPeriod:tp.getLastWeek(),
+        thisTrimester:tp.getTriSemester()
     };
     console.log(time);
 ```
 checkout ou the response will looks like
 ```shell
     {
-        a: 'yesterday at 23h',
-        b: 30,
-        c: { from: 2020-12-06T21:32:00.000Z, to: 2020-12-12T21:32:00.000Z },
-        d: { from: 2020-12-16T21:32:00.000Z, to: 2020-09-16T21:32:00.000Z }
+        timeLeft: '1d 7h 37m 28s',
+        daysOfMonth: 31,
+        thisWeekPeriod: { from: '2020-12-13', to: '2020-12-19' },
+        lastWeekPeriod: { from: '2020-12-06', to: '2020-12-12' },
+        thisTrimester: { from: '2020-09-17', to: '2020-12-17' }
     }
+```
+
+in case you need to get the differnet between two date
+```javascript
+    let date={
+        firstDate:"2020-12-17 10:23",
+        secondDate:"2020-12-17 10:20"
+    };
+    let tp = new PassedTime(dat);
+    console.log(tp.getTimePassed(config))
+```
+this is the output
+```shell
+    3m 0s
 ```

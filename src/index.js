@@ -1,4 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var PassedTime_1 = require("./PassedTime");
-exports.PassedTime = PassedTime_1.PassedTime;
+function passedTime(date) {
+    return new PassedTime_1.PassedTime(date);
+}
+exports["default"] = passedTime;

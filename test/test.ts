@@ -1,4 +1,5 @@
-import {PassedTime} from '../src/index';
+// import {PassedTime} from '../src/index';
+import passedTime from '../src/index';
 
 // let date="2020-12-17 10:23";
 let date={
@@ -6,7 +7,7 @@ let date={
         secondDate:"2020-12-17 10:20"
     };
 
-const tp = new PassedTime(date);
+const tp = passedTime(date);
 const config={
     detail:true
 }

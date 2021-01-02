@@ -32,9 +32,9 @@ include the module and form there you can pas the date as parametter, as show in
 * getTimePassed
 this method allow to get how much time passed until nom.
 ```javascript
-    const {PassedTime} = require("passed-time");
+    const passedTime = require("passed-time");
     let date="2020-12-17 10:23";
-    const pt= new PassedTime(date)
+    const pt= passedTime(date)
     console.log(pt.getTimePassed());    
 ```
 this out put look like, it will be defferent according the time you will test
